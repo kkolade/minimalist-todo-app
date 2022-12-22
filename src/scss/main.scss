@@ -1,0 +1,97 @@
+/* Container */
+.container {
+  width: 90%;
+  margin: 1rem auto;
+  border: 2px solid #ece8e8;
+  box-shadow: 0 0 4px #c9c4c4;
+}
+
+.header,
+.main {
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.add-todo,
+.edit-todo,
+.todo-item {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.add-todo {
+  font-style: italic;
+}
+
+.add-todo:focus,
+.edit-todo:focus {
+  outline: none;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.is-completed {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.description {
+  border: none;
+  outline: none;
+}
+
+.fa-trash {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-pen-to-square {
+  position: absolute;
+  right: 2.5rem;
+  cursor: pointer;
+}
+
+.footer {
+  height: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer a {
+  color: #444;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 45%;
+  }
+
+  .row {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
