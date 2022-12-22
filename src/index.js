@@ -36,3 +36,12 @@ todoList.addEventListener('click', (e) => {
     Views.refreshDOM();
   }
 });
+
+// To edit todo
+todoList.addEventListener('change', (e) => {
+  if (e.target.classList.contains('description')) {
+    const idItemToEdit = Number(e.target.parentElement.id);
+    Persist.updateTodoLS(idItemToEdit, e.target.value);
+    Views.refreshDOM();
+  }
+});
