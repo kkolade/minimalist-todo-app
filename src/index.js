@@ -22,3 +22,17 @@ todoForm.addEventListener('submit', (e) => {
   Views.clearInputField();
   Persist.addTodoToLS(todo);
 });
+
+// To remove a todo
+todoList.addEventListener('click', (e) => {
+  e.stopPropagation();
+
+  if (e.target.parentElement.classList.contains('fa-trash')) {
+    Views.removeTodoDOM(e.target);
+
+    const idItemToRemove = Number(e.target.parentElement.parentElement.id);
+
+    Persist.removeTodoLS(idItemToRemove);
+    Views.refreshDOM();
+  }
+});
