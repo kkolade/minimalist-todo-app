@@ -1,5 +1,6 @@
 const todoList = document.querySelector('.todo-list');
 const todoForm = document.querySelector('.todo-form');
+const clearCompleteTodo = document.querySelector('.clear-complete');
 
 // The Book Class
 
@@ -23,5 +24,5 @@ constructor(_description) {
 
 export default Todo;
 export {
-  todoList, todoForm, Todo,
+  todoList, todoForm, Todo, clearCompleteTodo,
 };
