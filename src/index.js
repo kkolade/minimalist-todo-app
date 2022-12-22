@@ -1,8 +1,9 @@
 import {
-  Todo, todoForm, todoList,
+  Todo, todoForm, todoList, clearCompleteTodo,
 } from './modules/todo.js';
 import Views from './modules/views.js';
 import Persist from './modules/persist.js';
+import Interactivity from './modules/interactivity.js';
 // eslint-disable-next-line import/no-unresolved
 import '@fortawesome/fontawesome-free/js/all.js';
 import './css/style.css';
@@ -45,4 +46,18 @@ todoList.addEventListener('change', (e) => {
     Persist.updateTodoLS(idItemToEdit, e.target.value);
     Views.refreshDOM();
   }
+});
+
+todoList.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    const completedItemId = Number(e.target.parentElement.id);
+    Interactivity.markAsCompleteTodoDOM(e.target);
+    Interactivity.markAsCompleteTodoLS(completedItemId);
+  }
+});
+
+clearCompleteTodo.addEventListener('click', (e) => {
+  e.preventDefault();
+  Interactivity.clearCompleted();
+  Views.refreshDOM();
 });

@@ -85,6 +85,10 @@
   display: none;
 }
 
+.line-thru {
+  text-decoration: line-through;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 45%;

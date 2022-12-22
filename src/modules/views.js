@@ -27,7 +27,13 @@ const Views = class {
 
   static displayTodos() {
     const todos = Persist.getLSContent();
-    todos.forEach((todo) => Views.addTodo(todo));
+    todos.forEach((todo) => {
+      if (todo.completed === true) {
+        // todo.description.classList.add('line-thru');
+      }
+      // console.log(description.value);
+      Views.addTodo(todo);
+    });
   }
 
   static clearInputField() {
