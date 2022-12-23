@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/kkolade/minimalist-todo-app/issues"
   },
-  "homepage": "https://github.com/kkolade/minimalist-todo-app#readme",
+  "homepage": "https://kkolade.github.io/minimalist-todo-app",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "clean-webpack-plugin": "^4.0.0",
@@ -46,6 +46,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1"
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "gh-pages": "^4.0.0"
   }
 }
