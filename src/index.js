@@ -3,7 +3,6 @@ import {
 } from './modules/todo.js';
 import Views from './modules/views.js';
 import Persist from './modules/persist.js';
-// eslint-disable-next-line import/no-unresolved
 import Interactivity from './modules/interactivity.js';
 // eslint-disable-next-line import/no-unresolved
 import '@fortawesome/fontawesome-free/js/all.js';
