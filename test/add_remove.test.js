@@ -21,3 +21,10 @@ test("removeTodoLS removes a todo from local storage", () => {
   const todo2 = { todoId: 2, text: "Submit project" };
   const todos = [todo1, todo2];
   localStorage.setItem("todos", JSON.stringify(todos));
+   Persist.removeTodoLS(1);
+
+  const updatedTodos = JSON.parse(localStorage.getItem("todos"));
+
+  expect(updatedTodos).toEqual([{ todoId: 1, text: "Submit project" }]);
+});
+
