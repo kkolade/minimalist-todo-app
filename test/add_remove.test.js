@@ -15,3 +15,9 @@ describe("Add_Remove_Todos", () => {
     });
   });
 });
+
+test("removeTodoLS removes a todo from local storage", () => {
+  const todo1 = { todoId: 1, text: "Finish writing tests" };
+  const todo2 = { todoId: 2, text: "Submit project" };
+  const todos = [todo1, todo2];
+  localStorage.setItem("todos", JSON.stringify(todos));
